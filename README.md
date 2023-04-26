@@ -43,7 +43,7 @@ To get started with LuiaTok, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/juaandominguez/LuiaTok.git`
 2. Install dependencies: `npm install`
-3. Copy .env.example to .env and change the keys
+3. Copy .env.example to .env and change the tokens
 4. Start the development server: `npm run dev`
 
 ## Contributing
