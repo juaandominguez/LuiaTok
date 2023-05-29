@@ -21,7 +21,7 @@ LuiaTok includes the following features:
 - **Video Upload**: Users can upload short-form videos to share with others on the platform.
 - **Video Feed**: Users can browse a feed of videos from other users, sorted by recency.
 - **User Profiles**: Users can create their own profiles and store likes and videos.
-- **Social Interactions**: Users can interact with videos by liking, commenting, or sharing them with others.
+- **Social Interactions**: Users can interact with videos by liking orcommenting uploaded posts.
 
 ## Architecture
 
