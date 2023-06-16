@@ -5,6 +5,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isSSR, setIsSSR] = useState(true);
@@ -19,6 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
   <GoogleOAuthProvider 
   clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}
   >
+    <Head>
+      <title>LuiaTok - Take a break</title>
+    </Head>
     <div className='xl:w-[1200px] m-auto overflow-hidden h-[100vh]'>
       <Navbar />
       <div className='flex gap-6 md:gap-20'>

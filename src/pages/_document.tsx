@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>LuiaTok - Take a break</title>
       </Head>
       <body>
         <Main />

@@ -34,7 +34,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
     }  
   }, [isMuted])
   return (
-    <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
+    <div className='flex flex-col border-b-2 border-gray-200 pb-6 w-full'>
       <div>
         <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded'>
             <div className='md:w-16 md:h-16 w-10 h-10'>
@@ -64,7 +64,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
         </div>
       </div>
 
-      <div className='lg:ml-20 flex gap-4 relative'>
+      <div className='lg:ml-20 flex gap-4 relative items-center justify-center w-full'>
         <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} 
         className='rounded-3xl'>
           <Link href={`/detail/${post._id}`}>
@@ -86,9 +86,9 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
           </Link>
 
           {isHover && (
-            <div className='absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] p-3'>
+            <div className='absolute cursor-pointer flex gap-10 p-3 -translate-y-12 md:-translate-y-16 pb-0'>
               {isPlaying ? (
-                <button onClick={onVideoPress}>
+                <button onClick={onVideoPress} style={{ zIndex: 1 }}>
                   <BsFillPauseFill className='text-black text-2xl lg:text-4xl' />
                 </button>) : (
                   <button onClick={onVideoPress}>
@@ -97,7 +97,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
                 )
               }
               {isMuted ? (
-                <button onClick={() => setIsMuted(false)}>
+                <button onClick={() => setIsMuted(false)} style={{ zIndex: 1 }}>
                   <HiVolumeOff className='text-black text-2xl lg:text-4xl' />
                 </button>) : (
                   <button onClick={() => setIsMuted(true)}>
